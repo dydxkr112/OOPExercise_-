@@ -1,5 +1,12 @@
 package member.view;
 
-public class MemberMenu {
+import java.util.Scanner;
 
+public class MemberMenu {
+	private Scanner sc = new Scanner(System.in);
+	
+	
+	
+	
+	
 }
