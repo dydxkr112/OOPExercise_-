@@ -26,7 +26,7 @@ public class MemberManager {
 
 		System.out.print("성별 : ");
 		char gender = sc.next().charAt(0);
-
+		sc.nextLine();
 		System.out.print("이메일 : ");
 		String email = sc.nextLine();
 
@@ -132,6 +132,7 @@ public class MemberManager {
 		for(int i = 0;i < ctn; i ++) {
 			if(deleteName.equals(m[i].getUserId())) {
 				m[i] = m[i+1];
+				count ++;
 				break;
 			}
 
@@ -152,8 +153,12 @@ public class MemberManager {
 	}
 
 	public void printAllMember() {
-		for(int i = 0; i < ctn; i ++) {
-			System.out.println(m[i].getUserId() + ", " + m[i].getUserPwd() + ", " + m[i].getUserName());
+		if(0<ctn) {
+			for(int i = 0; i < ctn; i ++) {
+				System.out.println(m[i].getUserId() + ", " + m[i].getUserPwd() + ", " + m[i].getUserName());
+			}
+		}else {
+			System.out.println("출력할 회원의 정보가 없습니다...");
 		}
 	}
 
